@@ -6,10 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Fonte do Google - Poppins -->
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Space+Grotesk:wght@300..700&family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+
 
     <!-- Padrão de Caracteres -->
     <meta charset="UTF-8" />
@@ -56,9 +59,9 @@
     <main>
       <section id="hero" class="hero_container">
         <article class="hero_content">
-          <h4>👏 Olá, eu sou Priscila!</h4>
+          <h4>✨🌐 Olá, sou Priscila Lins Mrozinski!</h4>
           <h1>Desenvolvedora Full Stack</h1>
-          <p>Transformo ideias em códigos e crio experiências incríveis</p>
+          <p>Transformo ideias em códigos e crio experiências incríveis.</p>
 
           <div class="hero_buttons">
             <a href="#contact" class="botao">Entre em Contato</a>
@@ -68,7 +71,7 @@
 
         <figure class="hero_image">
           <img
-            src="./assets/img/dev_woman.svg"
+            src="./assets/img/dev_woman.jpeg"
             alt="Ilustração com uma pessoa desenvolvedora escrevendo códigos."
             class="ilustracao float-animation"
           />
@@ -76,40 +79,7 @@
       </section>
 
       <section id="about" class="about_container">
-        <figure class="about_image">
-          <img
-            src="./assets/img/avatar_dev_woman.svg"
-            alt="Foto da pessoa desenvolvedora."
-          />
-        </figure>
-
-        <article class="about_content">
-          <h2>Sobre mim</h2>
-          <p>
-            Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não
-            altera o pão duris. Segunda-feiris nun dá, eu vô me pirulitá! Aenean
-            aliquam molestie leo, vitae iaculis nisl. Posuere libero varius.
-            Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi
-          </p>
-          <p>
-            Mussum Ipsum, cacilds vidis litro abertis. A ordem dos tratores não
-            altera o pão duris. Segunda-feiris nun dá, eu vô me pirulitá! Aenean
-            aliquam molestie leo, vitae iaculis nisl. Posuere libero varius.
-            Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi
-          </p>
-
-          <div class="about_stats">
-            <a href="#" target="_blank" class="botao">Ver GitHub</a>
-            <div class="stat-item">
-              <p class="stat-number">100</p>
-              <p class="stat-label">Seguidores</p>
-            </div>
-            <div class="stat-item">
-              <p class="stat-number">50</p>
-              <p class="stat-label">Repositórios</p>
-            </div>
-          </div>
-        </article>
+        
       </section>
 
       <section id="contact" class="contact_container">
@@ -117,13 +87,13 @@
           <h4>Entre em Contato</h4>
           <p>Sinta-se à vontade para entrar em contato comigo!</p>
           <div class="social_container">
-            <a href="#" target="_blank" class="social_icon">
+            <a href="https://www.linkedin.com/in/priscila-lins/" target="_blank" class="social_icon">
               <img src="./assets/img/linkedin.svg" alt="Link para o LinkedIn" />
             </a>
-            <a href="#" target="_blank" class="social_icon">
+            <a href="https://github.com/PriscilaMrozinski" target="_blank" class="social_icon">
               <img src="./assets/img/github.svg" alt="Link para o GitHub" />
             </a>
-            <a href="#" target="_blank" class="social_icon">
+            <!-- <a href="#" target="_blank" class="social_icon">
               <img
                 src="./assets/img/instagram.svg"
                 alt="Link para o Instagram"
@@ -131,11 +101,14 @@
             </a>
             <a href="#" target="_blank" class="social_icon">
               <img src="./assets/img/facebook.svg" alt="Link para o Facebook" />
-            </a>
+            </a> -->
           </div>
         </article>
 
-        <form id="formulario">
+        <form action="https://formsubmit.co/5a50aa406069d2f0f8eeccd417d69fb6" method="POST" id="formulario">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucess.html"> <!-- hidden: Campo oculto -->
+          <input type="hidden" name="_captcha" value="false"> <!-- não exibe o captcha quando envia o e-mail -->
+
           <label for="nome">Nome</label>
           <input
             id="nome"
@@ -152,7 +125,7 @@
             type="text"
             placeholder="Digite seu e-mail"
           />
-          <span id="txtemail"></span>
+          <span id="txtEmail"></span>
 
           <label for="assunto">Assunto</label>
           <input
@@ -177,5 +150,9 @@
 
     <!-- Footer / Rodapé -->
     <footer>Feito com ❤️ por Priscila Lins Mrozinski - 2025</footer>
-  </body>
+
+    <!-- Script JavaScript -->
+     <script src="./assets/js/scripts.js"></script>
+
+    </body>
 </html>

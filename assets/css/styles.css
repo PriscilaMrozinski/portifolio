@@ -11,16 +11,16 @@
 /* === VARIÁVEIS === */
 :root {
   /* Cores */
-  --purple-50: #f4eaff;
-  --purple-100: #e9dcfa;
-  --purple-200: #cdb3f0;
-  --purple-300: #b186e5;
-  --purple-400: #9460db;
-  --purple-500: #6b36c8;
-  --purple-600: #5b2ca0;
-  --purple-700: #4c2177;
-  --purple-800: #441f88;
-  --purple-900: #2a0e4d;
+  --magenta-50: #fdeaf3;
+  --magenta-100: #f9d1e4;
+  --magenta-200: #f1a2c8;
+  --magenta-300: #e774a8;
+  --magenta-400: #d94d8b;
+  --magenta-500: #9c0d54; /* cor principal da imagem */
+  --magenta-600: #850a49;
+  --magenta-700: #6e083f;
+  --magenta-800: #560633;
+  --magenta-900: #3b0424;
   --gray-100: #f5f5f5;
   --gray-200: #e8e8e8;
   --gray-400: #505861;
@@ -34,6 +34,8 @@
   --shadow-lg: 0 0.5rem 1.5rem #6b36c833;
   --shadow-focus: 0 0 0 0.25rem #6b36c81a;
 }
+
+
 
 /* Estilos Globais */
 
@@ -75,26 +77,26 @@ button {
 .botao {
   border: none; /*remove a borda padrão do botão*/
   color: var(--white); /*cor do texto branco*/
-  background-color: var(--purple-500); /*cor de fundo roxo médio*/
+  background-color: var(--magenta-500); /*cor de fundo roxo médio*/
 }
 
 /* Efeito quando passa o mouse nos botoes */
 .botao:hover {
-  background-color: var(--purple-800);
+  background-color: var(--magenta-800);
   box-shadow: var(--shadow-md);
   transform: translateY(-0.25rem); /*move o botão para cima*/
 }
 
 /* Configurar os Botões-Outline de uma forma específica*/
 .botao-outline {
-  border: 0.25rem solid var(--purple-500); /*borda roxa média*/
-  color: var(--purple-500); /*cor do texto roxo médio*/
+  border: 0.25rem solid var(--magenta-500); /*borda roxa média*/
+  color: var(--magenta-500); /*cor do texto roxo médio*/
   background-color: transparent; /*fundo transparente*/
 }
 
 /* Efeito quando passa o mouse nos botoes-outline */
 .botao-outline:hover {
-  background-color: var(--purple-500);
+  background-color: var(--magenta-500);
   color: var(--white);
   box-shadow: var(--shadow-md);
   transform: translateY(-0.25rem); /*move o botão para cima*/
@@ -106,8 +108,8 @@ button {
   position: sticky; /* efeito dos elementos passarem por baixo dele */
   top: 0; /* fixa o menu no topo */
   width: 100%; /* ocupa toda a largura da tela */
-  height: 5rem; /* altura do menu */
-  background-color: var(--purple-800); /* cor de fundo branco */
+  height: 8rem; /* altura do menu */
+  background-color: var(--magenta-700); /* cor de fundo branco */
   border-bottom: 0.5rem solid var(--gray-200); /* borda inferior cinza média */
   box-shadow: var(--shadow-sm); /* sombra média  */
   z-index: 1000; /* garante que o menu fique acima de outros elementos, ou seja todos os elementos passam por baixo do menu */
@@ -131,7 +133,7 @@ button {
 }
 
 .menu_container a:hover {
-  color: var(--purple-200);
+  color: var(--magenta-200);
 }
 
 #titulo a {
@@ -159,6 +161,9 @@ button {
   scroll-margin-top: 6rem; /* efeito de rolamento */
 }
 
+
+
+
 /* Seção Hero */
 
 .hero_image {
@@ -166,7 +171,15 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+
+.hero_container img {
+  max-width: 24rem; /* ajuste o tamanho da imagem */
+  width: 100%;
+  height: auto;
+}
+
 
 .ilustracao {
   width: 100%;
@@ -194,7 +207,7 @@ button {
 .hero_content h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--purple-500);
+    color: var(--magenta-500);
 }
 
 .hero_content h1 {
@@ -254,6 +267,7 @@ button {
     gap: 4rem;
     background-color: var(--gray-200);
     border-radius: 1rem;
+
 }
 
 .about_image {
@@ -262,16 +276,20 @@ button {
 
 .about_image img {
     width: 100%;
-    border: 0.375rem solid var(--purple-500);
+    border: 0.375rem solid var(--magenta-500);
     border-radius: 50%; /* arredonda completo, quadrado vira círculo */
     box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+
 }
 
 .about_content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--purple-800);
+    color: var(--magenta-800);
+   
+
 }
 
 .about_content p {
@@ -279,6 +297,11 @@ button {
     line-height: 1.875rem;
     color: var(--gray-400);
     margin-bottom: 1rem;
+    text-align: justify;          /* justifica o texto */
+    text-justify: inter-word;     /* distribui melhor o espaçamento */
+    max-width: 44rem; /* reduz a largura máxima */
+
+
 }
 
 .about_stats {
@@ -306,7 +329,7 @@ button {
 .stats-wrapper .stat-number {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--purple-500);
+    color: var(--magenta-500);
     margin-bottom: 0;
 }
 
@@ -330,7 +353,7 @@ button {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--purple-500);
+  color: var(--magenta-500);
 }
 
 .contact_info p{
@@ -355,7 +378,7 @@ button {
 }
  
 .social_icon:hover{
-    background-color: var(--purple-600);
+    background-color: var(--magenta-600);
     transform: translateY(-0.25rem);
     box-shadow: var(--shadow-md);
 }
@@ -396,7 +419,7 @@ textarea{
  
 form input:focus,
 form textarea:focus{
-    border-color: var(--purple-500);
+    border-color: var(--magenta-500);
     box-shadow: var(--shadow-focus);
 }
  
@@ -438,7 +461,7 @@ form span{
   /* align-items: center;     Centraliza verticalmente */
   width: 6rem;
   height: 6rem;
-  background-color: var(--purple-100);
+  background-color: var(--magenta-100);
   border-radius: 50%;
   margin: 0 auto; /* garante centralização horizontal */
   box-shadow: var(--shadow-md); /* faz a sobra */
@@ -451,7 +474,7 @@ footer {
   padding: 2.5rem;
   font-weight: 600;
   text-align: center;
-  background: linear-gradient(to right top, var(--purple-500), var(--purple-800)); /* começa com 500 e termina cor 800 */
+  background: linear-gradient(to right top, var(--magenta-500), var(--magenta-800)); /* começa com 500 e termina cor 800 */
   color: var(--white);
   margin-top: auto;
   
@@ -513,15 +536,19 @@ footer {
 
   .about_image {
     max-width: 12rem;
+    
+    
   }
 
   .about_content h2 {
     font-size: 1.75rem;
+    
   }
 
   .about_content p {
     font-size: 1rem;
     line-height: 1.5rem;
+    
   }
 
   .about_stats {
